@@ -1,0 +1,12 @@
+<ion-item>
+  <ion-label>Username</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Password</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-button expand="block" (click)="signIn()">Sign In</ion-button>
+
+<h1 *ngIf="auth.isLoggedIn()">You are now signed in</h1>
