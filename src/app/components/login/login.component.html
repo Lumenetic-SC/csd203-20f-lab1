@@ -1,12 +1,13 @@
 <ion-item>
-  <ion-label>Username</ion-label>
-  <ion-input></ion-input>
+  <ion-label>Email</ion-label>
+  <ion-input [(ngModel)]="email"></ion-input>
 </ion-item>
 <ion-item>
   <ion-label>Password</ion-label>
-  <ion-input></ion-input>
+  <ion-input [(ngModel)]="password"></ion-input>
 </ion-item>
 
-<ion-button expand="block" (click)="signIn()">Sign In</ion-button>
+<ion-button expand="block" (click)="signInWithGoogle()">Sign In with Google</ion-button>
+<a routerLink="/user-benefits">Why sign up?</a>
 
-<h1 *ngIf="auth.isLoggedIn()">You are now signed in</h1>
+<h1 *ngIf="auth.isLoggedIn()">You are now signed in as {{auth.getUserData().email}}!</h1>
